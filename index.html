@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmic Explorer — Journey Through the Stars</title>
+  <meta name="description" content="An interactive journey through our solar system and beyond." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">✦</span>
+        <span>Cosmic<span class="accent">Explorer</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#planets" class="nav-link">Planets</a></li>
+        <li><a href="#missions" class="nav-link">Missions</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+      </ul>
+      <button class="nav-cta" id="navCta">Launch 🚀</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome, explorer</p>
+      <h1 class="hero-title">
+        Journey Through<br />
+        <span class="gradient-text">The Cosmos</span>
+      </h1>
+      <p class="hero-sub">
+        Explore the wonders of our solar system — from the scorching surface of Mercury
+        to the icy rings of Saturn. An interactive voyage awaits.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="exploreBtn">Begin the Journey ↓</button>
+        <button class="btn btn-ghost" id="learnBtn">Learn More</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-count="8">0</span><span class="stat-label">Planets</span></div>
+        <div class="stat"><span class="stat-num" data-count="290">0</span><span class="stat-label">Moons</span></div>
+        <div class="stat"><span class="stat-num" data-count="4.6">0</span><span class="stat-label">Billion Years</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" id="heroVisual">
+      <div class="orbit orbit-1"></div>
+      <div class="orbit orbit-2"></div>
+      <div class="orbit orbit-3"></div>
+      <div class="sun"></div>
+      <div class="planet p1"></div>
+      <div class="planet p2"></div>
+      <div class="planet p3"></div>
+      <div class="planet p4"></div>
+    </div>
+    <div class="scroll-hint" id="scrollHint">
+      <span>Scroll to explore</span>
+      <div class="mouse"><div class="wheel"></div></div>
+    </div>
+  </header>
+
+  <section class="section" id="planets">
+    <div class="section-head">
+      <p class="section-eyebrow">The Solar System</p>
+      <h2 class="section-title">Meet the <span class="gradient-text">Planets</span></h2>
+      <p class="section-sub">Hover or tap each planet to reveal its secrets.</p>
+    </div>
+    <div class="planet-grid" id="planetGrid"></div>
+  </section>
+
+  <section class="section missions" id="missions">
+    <div class="section-head">
+      <p class="section-eyebrow">Human Achievement</p>
+      <h2 class="section-title">Legendary <span class="gradient-text">Missions</span></h2>
+      <p class="section-sub">Milestones that pushed humanity into the stars.</p>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="about-card">
+      <h2 class="section-title">Ready to <span class="gradient-text">Explore?</span></h2>
+      <p class="section-sub">
+        The universe is vast, beautiful, and full of mystery. Keep looking up —
+        there's always something new to discover.
+      </p>
+      <button class="btn btn-primary" id="ctaBtn">Take Me to the Stars ✨</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Built with ✦ by <span class="accent">Cosmic Explorer</span></p>
+    <p class="footer-note">© 2026 — A journey through space & time</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
